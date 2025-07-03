@@ -52,6 +52,19 @@ def delete_task(task_id):
     tasks = updated_tasks
     return '', 204
 
+@app.route('/')
+def index():
+    return jsonify({
+        "message": "Welcome to the Task Tracker API!",
+        "endpoints": {
+            "GET /tasks": "List all tasks",
+            "POST /tasks": "Create a new task",
+            "PUT /tasks/<id>": "Update a task",
+            "DELETE /tasks/<id>": "Delete a task"
+        }
+    }), 200
+
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
 
