@@ -20,34 +20,36 @@ This API allows users to create, read, update, and delete tasks. Tasks are store
 | PUT    | `/tasks/:id`    | Update task (title or completed) | `{ "title": "New title", "completed": true }` | Updated task object           |
 | DELETE | `/tasks/:id`    | Delete a task                   | N/A                              | No content (204)              |
 
-## How to Run
+## How to Run in GitHub Codespaces
 
-### Locally (if you have Python installed)
+1. Open the repository in GitHub Codespaces by clicking the green **Code** button on GitHub, then **Codespaces** → **Create codespace on main**.
 
-1. Clone the repo:  
-   ```bash
-   git clone https://github.com/fifidonnelly/task-tracker-api.git
-   cd task-tracker-api 
-   ```
+2. In the Codespaces terminal, install dependencies:
 
-2. Create a virtual environment:
-    ```bash 
-    python -m venv venv
-    source venv/bin/activate  # On Windows: venv\Scripts\activate
-    ```
-
-3. Install dependencies:
     ```bash
     pip install -r requirements.txt
     ```
 
-4. Run the Flask app:
-    ```bash
-    python app.py 
+3. Run the flask app:
+
+    ``` bash
+    python app.py
     ```
 
-5. Open your browser or API client and use the endpoints at:  
-`http://127.0.0.1:5000`
+4. The app is configured to listen on all network interaces and port 5000: 
+
+    ``` python
+    if __name__ == '__main__':
+        app.run(host='0.0.0.0', port=5000, debug=True)
+    ```
+
+5. Click the Ports tab in Codespaces and click the link next to port 5000 to open your running API in a browser. The URL will look like:  
+    `https://<cautious-winner>-5000.app.github.dev/`
+
+6. Use this URL with your API endpoints: 
+    ```http
+    GET https://<cautious-winner>-5000.app.github.dev/tasks
+    ```
 
 ## Online (via GitHub Codespaces or Replit)
 You can run this project in an online IDE that supports Python and Flask without installing anything locally.
