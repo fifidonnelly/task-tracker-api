@@ -44,11 +44,15 @@ This API allows users to create, read, update, and delete tasks. Tasks are store
     ```
 
 5. Click the Ports tab in Codespaces and click the link next to port 5000 to open your running API in a browser. The URL will look like:  
-    `https://<cautious-winner>-5000.app.github.dev/`
+    `https://cautious-winner-9vp9975jpgj37v6v-5000.app.github.dev/`
+
+ **Important:** If the link does not open or shows a 404 error, ensure port 5000 is set to **Public**:  
+   - Click the gear icon next to the port in the Ports tab  
+   - Set the visibility to **Public**
 
 6. Use this URL with your API endpoints: 
     ```http
-    GET https://<cautious-winner>-5000.app.github.dev/tasks
+    GET https://cautious-winner-9vp9975jpgj37v6v-5000.app.github.dev/tasks
     ```
 
 ## Online (via GitHub Codespaces or Replit)
