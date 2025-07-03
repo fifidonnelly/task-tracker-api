@@ -25,24 +25,29 @@ This API allows users to create, read, update, and delete tasks. Tasks are store
 ### Locally (if you have Python installed)
 
 1. Clone the repo:  
-   bash
+   ```bash
    git clone https://github.com/fifidonnelly/task-tracker-api.git
-   cd task-tracker-api
+   cd task-tracker-api 
+   ```
 
 2. Create a virtual environment:
-    bash 
+    ```bash 
     python -m venv venv
     source venv/bin/activate  # On Windows: venv\Scripts\activate
+    ```
 
 3. Install dependencies:
-    bash
+    ```bash
     pip install -r requirements.txt
+    ```
 
 4. Run the Flask app:
+    ```bash
     python app.py 
+    ```
 
-5. Open your browser on API client and use endpoints at
-    http://127.0.0.1:5000 
+5. Open your browser or API client and use the endpoints at:  
+`http://127.0.0.1:5000`
 
 ## Online (via GitHub Codespaces or Replit)
 You can run this project in an online IDE that supports Python and Flask without installing anything locally.
