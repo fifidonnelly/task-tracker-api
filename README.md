@@ -71,3 +71,8 @@ You can run this project in an online IDE that supports Python and Flask without
 - Add user authentication and authorization  
 - Develop a frontend interface with animations for task management  
 
+## Testing
+
+All API endpoints have been manually tested using [Postman](https://www.postman.com/), a popular API client. This includes creating, reading, updating, and deleting tasks to ensure the API behaves as expected.
+
+
