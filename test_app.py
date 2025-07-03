@@ -1,11 +1,16 @@
 import unittest
 import json
-from app import app
+from app import app, tasks, task_id_counter
 
 class TaskTrackerTestCase(unittest.TestCase):
     def setUp(self):
         self.app = app.test_client()
         self.app.testing = True
+        # Clear tasks and reset counter before each test
+        tasks.clear()
+        global task_id_counter
+        task_id_counter = 1
+
 
     def test_get_tasks_empty(self):
         response = self.app.get('/tasks')
